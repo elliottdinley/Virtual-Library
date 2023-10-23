@@ -17,6 +17,10 @@ class Movie extends Media {
             return max.duration > val.duration ? max : val;
         })
     }
+
+    static calculateAverageRating(movies) {
+        return movies.reduce((acc, val) => acc + val.rating, 0) / movies.length;
+    }
 }
 
 module.exports = Movie;

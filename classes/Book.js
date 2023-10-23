@@ -17,6 +17,10 @@ class Book extends Media {
             return max.rating > val.rating ? max : val;
         })
     }
+
+    static calculateAverageRating(books) {
+        return books.reduce((acc, val) => acc + val.rating, 0) / books.length;
+    }
 }
 
 module.exports = Book;
